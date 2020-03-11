@@ -1,94 +1,79 @@
 body {
-  background-image: url("background.jpg");
-  background-color: #fff;
-  height: 100vh;
-
-  display:flex;
+     background-image: url("background.jpg");
+     background-color: #fff;
+     height: 100vh;
+     display:flex;
 }
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+ * {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
 }
-
-#left {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+ #left {
+     display: flex;
+     justify-content: center;
+     align-items: center;
 }
-#left img {
-  width: 100%;
-  height: auto;
+ #left img {
+     width: 100%;
+     height: auto;
 }
-
-#left price {
-
+ #left price {
 }
-
-#right {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 20px;
-  padding: 10% 5%;
+ #right {
+     display: grid;
+     grid-template-columns: 1fr;
+     grid-gap: 20px;
+     padding: 10% 5%;
 }
-
-#right container {
- padding:20px;
-
+ #right container {
+     padding:20px;
 }
-
-#right p  {
-  font-family: "Ebrima";
-  color: #949494;
-  text-align: center;
-  padding: 30px 0px 30px 0px;
+ #right p {
+     font-family: "Ebrima";
+     color: #949494;
+     text-align: center;
+     padding: 30px 0px 30px 0px;
 }
-
-#right h {
-   font-family: "Trajan Pro 3";
-   letter-spacing: 10px;
-   font-size: 45px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   padding: 30px 0px 30px 0px;
-
+ #right h {
+     font-family: "Trajan Pro 3";
+     letter-spacing: 10px;
+     font-size: 45px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 30px 0px 30px 0px;
 }
-#right h1 {
-  font-family: "Trajan Pro 3";
-  letter-spacing: 10px;
-  color: #949494;
-  font-size: 11px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 30px 0px 30px 0px;
+ #right h1 {
+     font-family: "Trajan Pro 3";
+     letter-spacing: 10px;
+     color: #949494;
+     font-size: 11px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 30px 0px 30px 0px;
 }
-#payment {
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 30px 0px 30px 0px;
-
+ #payment {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 30px 0px 30px 0px;
 }
-#paypal {
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+ #paypal {
+     display: flex;
+     align-items: center;
+     justify-content: center;
 }
-
-#form {
-  width: 1000px;
-  height: 700px;
-  margin:auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 0vw;
-  padding: 5vh;
-  background: #fff;
-  border-radius: 11px;
+ #form {
+     width: 1000px;
+     height: 700px;
+     margin:auto;
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     grid-gap: 0vw;
+     padding: 5vh;
+     background: #fff;
+     border-radius: 11px;
 }
+ 
