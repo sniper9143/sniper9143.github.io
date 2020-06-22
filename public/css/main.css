@@ -720,7 +720,7 @@ textarea:focus::placeholder, input:focus::placeholder {
   }
   .landing_video {
     display: block;
-    position: absolute;
+    position: fixed;
     z-index: -5;
     width: 100%;
   }
