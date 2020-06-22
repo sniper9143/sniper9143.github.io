@@ -77,6 +77,7 @@ header {
 
 nav {
   grid-column: 1 / span 8;
+  overflow: auto;
 }
 
 #logo_toggle {
@@ -523,7 +524,7 @@ textarea:focus::placeholder, input:focus::placeholder {
 }
 
 .trademark {
-  padding-top: 60px;
+  padding-top: 20px;
   padding-bottom: 60px;
   grid-column: 1 / span 8;
   background-color: var(--dark1);
@@ -531,12 +532,14 @@ textarea:focus::placeholder, input:focus::placeholder {
 
 .trademark_links {
   display: flex;
-  align-items: center;
+
+  flex-wrap:wrap
 }
 
 .trademark_links a {
-  margin-right: 60px;
-  margin:0 24px;
+  margin-right: 40px;
+  margin-top: 40px;
+  width: 75px;
   color: var(--light1);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
@@ -575,6 +578,7 @@ textarea:focus::placeholder, input:focus::placeholder {
     margin-top: 5px;
     margin-left: 0px;
     margin-bottom: 5px;
+
   }
 
   .toggle_active {
@@ -710,16 +714,20 @@ textarea:focus::placeholder, input:focus::placeholder {
   .landing {
     background: var(--medium350);
   }
-  .video_container {
-    position: relative;
-  }
 
+  .video_container {
+    grid-column: 1 / span 8;
+  }
   .landing_video {
-    display: flex;
-    position: fixed;
+    display: block;
+    position: absolute;
     z-index: -5;
-    width: 100%
-    }
+    width: 100%;
+  }
+  .trademark_links a {
+    width: 50%;
+    margin-right: 0px;
+  }
 }
 
 @media (max-width:378px) {
