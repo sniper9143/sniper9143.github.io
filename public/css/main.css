@@ -728,6 +728,12 @@ textarea:focus::placeholder, input:focus::placeholder {
     width: 50%;
     margin-right: 0px;
   }
+
+  main, header, nav, .landing_container, .toggle_content,  .landing, .info_cards, .cards, .pitches, .prices, .about, .portfolio, .contact, .trademark {
+    display: grid;
+    grid-column-gap: 15px;
+    grid-template-columns:minmax(10px, .3fr) repeat(6, minmax(10px, 1fr)) minmax(10px, .3fr);
+  }
 }
 
 @media (max-width:378px) {
