@@ -24,7 +24,12 @@ html, body {
 
 }
 
-
+.anchor {
+    display: block;
+    position: relative;
+    top: -67px;
+    visibility: hidden;
+}
 
 p, a, h1, h2, h3, h4, button, .form_input {
   font-family: "Lato";
@@ -242,14 +247,14 @@ h2 , .form_input {
 
 .cards {
   grid-column: 2 / span 6;
-  display: flex;
-  width:100%
+  grid-template-columns: repeat(3, 1fr);
+  width:100%;
 }
 
 .card {
   background-color: var(--medium1);
   padding: 20px;
-  width: 33%;
+  width: 100%;
   display: grid;
   align-items: center;
   justify-items: center;
@@ -686,7 +691,7 @@ textarea:focus::placeholder, input:focus::placeholder {
     margin-bottom: 0px;
   }
 
-  main, header, nav, .landing_container, .toggle_content,  .landing, .info_cards, .cards, .pitches, .prices, .about, .portfolio, .contact, .trademark {
+  main, header, nav, .landing_container,  .landing, .info_cards, .cards, .pitches, .prices, .about, .portfolio, .contact, .trademark {
     display: grid;
     grid-column-gap: 15px;
     grid-template-columns:minmax(10px, .6fr) repeat(6, minmax(10px, 1fr)) minmax(10px, .6fr);
