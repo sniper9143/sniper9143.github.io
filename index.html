@@ -9,10 +9,15 @@
   </head>
   <body>
     <main>
-      <div class="video_container">
-        <video loop muted autoplay playsinline poster="public/assets/images/frame.jpg" class="landing_video">
-            <source src="public/assets/images/video.mp4" type="video/mp4">
-        </video>
+
+          <div class="video_container">
+            <div class="video_mask"></div>
+            <video loop muted autoplay playsinline poster="public/assets/images/frame.jpg" class="landing_video">
+                <source src="public/assets/images/video.mp4" type="video/mp4">
+            </video>
+
+          </div>
+
       </div>
       <header>
         <nav>
@@ -143,7 +148,7 @@
       </section>
       <section id="portfolio" class="portfolio">
         <div class="content_container">
-          <div data-aos="zoom-out-up"  class="top_header">
+          <div data-aos="zoom-in"  class="top_header">
             <h3>My Portfolio</h3>
             <img id="plane" src="public/assets/images/plane.svg" alt="">
             <p>Here are examples of my work. These are all custom website built and designed from the ground up. Just sit and imagine one of these as your own website. Replace the pictures, text, colors, and logo with your buisness. I will make the website you are imagining at an affordable price. </p>
@@ -184,7 +189,9 @@
           </div>
           <div class="pitch">
             <div class="pitch_left">
-              <img class="pitch_image" src="public/assets/images/self_portrait.svg" alt="">
+              <div class="pitch_image_container">
+                <img class="pitch_image" src="public/assets/images/self_portrait.svg" alt="">
+              </div>
             </div>
             <div class="pitch_right">
               <div class="pitch_paragraph">
