@@ -685,6 +685,12 @@ textarea:focus::placeholder, input:focus::placeholder {
   .portfolio p {
     margin-bottom: 0px;
   }
+
+  main, header, nav, .landing_container, .toggle_content,  .landing, .info_cards, .cards, .pitches, .prices, .about, .portfolio, .contact, .trademark {
+    display: grid;
+    grid-column-gap: 15px;
+    grid-template-columns:minmax(10px, .6fr) repeat(6, minmax(10px, 1fr)) minmax(10px, .6fr);
+  }
 }
 
 @media (max-width:778px) {
@@ -712,17 +718,28 @@ textarea:focus::placeholder, input:focus::placeholder {
   }
 
   .landing {
-    background: var(--medium350);
+    background: transparent;
   }
 
   .video_container {
     grid-column: 1 / span 8;
+    z-index: -5;
+  }
+
+  .video_mask {
+    background: var(--medium350);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1
   }
   .landing_video {
     display: block;
     position: fixed;
-    z-index: -5;
     width: 100%;
+    z-index: -3;
   }
   .trademark_links a {
     width: 50%;
