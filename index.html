@@ -3,21 +3,13 @@
   <head>
     <link rel="stylesheet" href="public/css/main.css">
     <link rel="stylesheet" href="public/assets/lib/aos_dist/aos.css">
+    <link rel="icon" href="public/assets/images/icon.ico">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TriWeb</title>
   </head>
   <body>
     <main>
-
-          <div class="video_container">
-            <div class="video_mask"></div>
-            <video loop muted autoplay playsinline poster="public/assets/images/frame.jpg" class="landing_video">
-                <source src="public/assets/images/video.mp4" type="video/mp4">
-            </video>
-
-          </div>
-
       </div>
       <header>
         <nav>
@@ -31,24 +23,33 @@
             <div class="nav_elements">
               <img id="logo_nav" class="logo" src="public/assets/images/logo.svg">
               <div class="links">
-                <a href="#landing">Home</a>
-                <a href="#about">About</a>
-                <a href="#pitches">Services</a>
-                <a href="#portfolio">Portfolio</a>
-                <a href="#prices">Pricing</a>
-                <button onClick="document.getElementById('contact').scrollIntoView();" class="button" type="button" name="button"><p>Contact</p></button>
+                <a id="page_nav_link" href="#landing">Home</a>
+                <a id="page_nav_link" href="#about">About</a>
+                <a id="page_nav_link" href="#pitches">Services</a>
+                <a id="page_nav_link" href="#portfolio">Portfolio</a>
+                <a id="page_nav_link" href="#prices">Pricing</a>
+                <button id="page_nav_link" onClick="document.getElementById('contact').scrollIntoView();" class="button" type="button" name="button"><p>Contact</p></button>
               </div>
             </div>
           </div>
         </nav>
       </header>
-      <section id="landing" class="landing">
+      <section class="video">
+        <div class="video_container">
+          <div class="video_mask"></div>
+          <video loop muted autoplay playsinline poster="public/assets/images/frame.jpg" class="landing_video">
+              <source src="public/assets/images/video.mp4" type="video/mp4">
+          </video>
+        </div>
+      </section>
+      <a class="anchor" id="landing"></a>
+      <section class="landing">
         <div class="landing_container">
           <div class="info">
             <img id="landing_mobile_art" src="public/assets/images/mobile_art.svg" alt="">
             <h1>Affordable Web Design</h1>
             <h2>Building your success online with responsive and cost-effective web design</h2>
-            <button onClick="document.getElementById('contact').scrollIntoView();" class="button" type="button" name="button"><p>View Services</p></button>
+            <button id="page_nav_link" onClick="document.getElementById('pitches').scrollIntoView();" class="button" type="button" name="button"><p>View Services</p></button>
           </div>
           <img id="landing_image_pc" src="public/assets/images/landing.png" alt="">
           <img id="landing_image_mobile" src="public/assets/images/landing_mobile.png" alt="">
@@ -73,7 +74,8 @@
           </div>
         </div>
       </section>
-      <section id="pitches" class="pitches">
+      <a class="anchor" id="pitches"></a>
+      <section class="pitches">
         <div class="content_container">
           <div class="pitch">
             <div data-aos="zoom-in-right" class="pitch_left">
@@ -120,7 +122,8 @@
           </div>
         </div>
       </section>
-      <section id="prices" class="prices">
+      <a class="anchor" id="prices"></a>
+      <section  class="prices">
         <div class="prices_header">
           <h3>Value Packages</h3>
           <img src="public/assets/images/box.svg" alt="">
@@ -146,10 +149,11 @@
           </div>
         </div>
       </section>
-      <section id="portfolio" class="portfolio">
+      <a class="anchor" id="portfolio"></a>
+      <section class="portfolio">
         <div class="content_container">
           <div data-aos="zoom-in"  class="top_header">
-            <h3>My Portfolio</h3>
+            <h3>Portfolio</h3>
             <img id="plane" src="public/assets/images/plane.svg" alt="">
             <p>Here are examples of my work. These are all custom website built and designed from the ground up. Just sit and imagine one of these as your own website. Replace the pictures, text, colors, and logo with your buisness. I will make the website you are imagining at an affordable price. </p>
           </div>
@@ -181,7 +185,8 @@
           </div>
         </div>
       </section>
-      <section id="about" class="about">
+      <a class="anchor" id="about"></a>
+      <section class="about">
         <div class="content_container">
           <div class="top_header">
             <h3>About me</h3>
@@ -207,7 +212,8 @@
           </div>
         </div>
       </section>
-      <section id="contact" class="contact">
+      <a class="anchor" id="contact"></a>
+      <section  class="contact">
         <div class="content_container">
           <div class="top_header">
             <h3>Contact me</h3>
@@ -242,13 +248,16 @@
     <script type="text/javascript">
       $(document).ready(function(){
 
-        $(".toggle").click(function(){
-          $(".nav_content").slideToggle(400);
-          $(".toggle_content").toggleClass('toggle_active');
+        $(".toggle, #page_nav_link").click(function(){
+          if (window.matchMedia('(max-width: 950px)').matches){
+            $(".nav_content").slideToggle(400);
+            $(".toggle_content").toggleClass('toggle_active');
+          }
         })
 
+
         $(window).resize(function(){
-          if ($(window).width() <= 950){
+          if (window.matchMedia('(max-width: 950px)').matches){
             $(".nav_content").css("display", "none");
           }	else {
             $(".nav_content").css("display", "flex");
