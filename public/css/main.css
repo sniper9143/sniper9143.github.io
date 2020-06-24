@@ -720,10 +720,10 @@ textarea:focus::placeholder, input:focus::placeholder {
   .landing {
     background: transparent;
   }
-
-  .video_container {
-    grid-column: 1 / span 8;
-    z-index: -5;
+  .video {
+    position: fixed;
+    top: 0;
+    z-index: -2;
   }
 
   .video_mask {
